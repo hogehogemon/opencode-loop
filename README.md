@@ -2,6 +2,8 @@
 
 A self-growth observation system **for opencode**. It reviews session logs to find improvement points — missing rules, skill gaps, and useful techniques. All proposals require **human approval** (human-in-the-loop). Trigger manually by typing `/loop`. Run **daily or at least weekly** for best results.
 
+**Version: 1.0.0**
+
 ## What it does
 
 At session start (or via `/loop` command), loop engineering:
