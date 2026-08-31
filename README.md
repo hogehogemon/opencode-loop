@@ -1,4 +1,4 @@
-# Loop Engineering for opencode
+# Loop Engineering Skill for opencode
 
 A self-growth observation system **for opencode**. It reviews session logs to find improvement points — missing rules, skill gaps, and useful techniques. All proposals require **human approval** (human-in-the-loop). Trigger manually by typing `/loop`. Run **daily or at least weekly** for best results.
 
