@@ -32,7 +32,7 @@ def _ts_to_str(ts: int) -> str:
 
 
 def _extract_text(data: str) -> str:
-    """part.data / message.data の JSON から可読テキストを取り出す。"""
+    """Extract readable text from part.data / message.data JSON."""
     try:
         obj = json.loads(data)
     except json.JSONDecodeError:
@@ -147,11 +147,11 @@ def search_sessions(query: str, limit: int = 20, title_only: bool = False) -> li
 def list_recent_sessions(days: int, limit: int = 20,
                          dir_filter: str | None = None,
                          compact: bool = False) -> list[dict]:
-    """直近 days 日以内に更新されたセッションを新しい順に列挙する。
+    """List sessions updated in the last N days (newest first).
 
-    ループエンジニアリング（session-observer）が現在セッション以外の直近のやり取りを
-    振り返るために使う。part テーブルから最新のメッセージを拾い、
-    title ベースの要約情報を返す。compact=True の場合はタイトル1行のみ。
+    Used by loop engineering to review recent sessions beyond the current one.
+    Fetches latest messages from part table and returns title-based summary.
+    compact=True returns title only (one line per session).
     """
     conn = sqlite3.connect(DB_PATH)
     conn.row_factory = sqlite3.Row
