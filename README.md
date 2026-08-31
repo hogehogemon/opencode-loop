@@ -17,13 +17,13 @@ At session start (or via `/loop` command), loop engineering:
 
 ## Installation
 
-Ask opencode to install this skill. It will copy the files to the correct locations:
+Ask opencode to install this skill:
 
 ```
-"Install loop engineering for opencode"
+"Install loop engineering from https://github.com/hogehogemon/opencode-loop"
 ```
 
-The agent will set up:
+The agent will clone the repo and set up:
 - `script/loop.py`
 - `.opencode/skills/loop/SKILL.md`
 - `.opencode/commands/loop.md`
