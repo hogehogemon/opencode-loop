@@ -40,7 +40,11 @@ Type `/loop` or ask the agent to "run loop engineering".
 py script/loop.py --recent 7                    # list recent sessions
 py script/loop.py --recent 7 --dir my-project   # filter by project
 py script/loop.py "user correction"             # search session content
+py script/loop.py --version                     # show installed version
 ```
+
+### Check for updates
+Check https://github.com/hogehogemon/opencode-loop/releases for the latest version.
 
 ## File structure
 
