@@ -15,10 +15,10 @@ If no skills exist, treat AGENTS.md as the sole knowledge base.
 ### Step 1 — Review current + recent sessions
 Observe the following:
 - **Current session** (the entire conversation; focus on user corrections, changes, and instructions)
-- **Recent sessions**: run `py script/loop.py --recent 7 --dir <project-dir> --compact` to list sessions updated in the last 7 days.
+- **Recent sessions**: run `py .opencode/skills/loop/loop.py --recent 7 --dir <project-dir> --compact` to list sessions updated in the last 7 days.
   - Use `--dir` to exclude other projects
   - Use `--compact` for one-line-per-session output
-  - To see details, re-run without `--compact`, or search with `py script/loop.py "<query>"`
+  - To see details, re-run without `--compact`, or search with `py .opencode/skills/loop/loop.py "<query>"`
 
 Extract these observation points from each session:
 1. **Missing rules** — user corrections that exposed rules not documented in AGENTS.md or skills.

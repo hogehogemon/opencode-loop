@@ -25,10 +25,7 @@ Ask opencode to install this skill:
 "Install loop engineering from https://github.com/hogehogemon/opencode-loop"
 ```
 
-The agent will clone the repo and set up:
-- `script/loop.py`
-- `.opencode/skills/loop/SKILL.md`
-- `.opencode/commands/loop.md`
+The agent will clone the repo and copy `skills/loop/` to `.opencode/skills/loop/`.
 
 ## Usage
 
@@ -37,10 +34,10 @@ Type `/loop` or ask the agent to "run loop engineering".
 
 ### CLI (direct search)
 ```bash
-py script/loop.py --recent 7                    # list recent sessions
-py script/loop.py --recent 7 --dir my-project   # filter by project
-py script/loop.py "user correction"             # search session content
-py script/loop.py --version                     # show installed version
+py .opencode/skills/loop/loop.py --recent 7                    # list recent sessions
+py .opencode/skills/loop/loop.py --recent 7 --dir my-project   # filter by project
+py .opencode/skills/loop/loop.py "user correction"             # search session content
+py .opencode/skills/loop/loop.py --version                     # show installed version
 ```
 
 ### Check for updates
@@ -48,12 +45,11 @@ Check https://github.com/hogehogemon/opencode-loop/releases for the latest versi
 
 ## File structure
 
-After installation, loop engineering creates:
-
 ```
 .opencode/skills/loop/
 ├── SKILL.md              # skill definition
-├── last_run.txt          # last execution timestamp
+├── loop.py               # session search tool
+├── last_run.txt          # last execution timestamp (auto-generated)
 └── observations.md       # proposals + techniques (auto-generated)
 ```
 
