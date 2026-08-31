@@ -1,6 +1,6 @@
 ---
 name: loop
-description: Use at session start to run the loop-engineering self-growth observation (when last_run.txt is older than 24h). Observes the current session and appends findings to observations.md. Does NOT modify AGENTS.md or any skill without user approval.
+description: Run loop engineering observation. Reviews sessions to find missing rules, skill gaps, and techniques. Does NOT modify AGENTS.md or any skill without user approval.
 ---
 
 # Loop Engineering (Session Observation Skill)
