@@ -8,6 +8,7 @@ Usage:
     py script/loop.py <query> [--limit N] [--title-only]
     py script/loop.py "OKF" --limit 5
     py script/loop.py --recent 7     # list sessions updated in last 7 days
+    py script/loop.py --version      # show version
 """
 
 import argparse
@@ -22,6 +23,7 @@ if hasattr(sys.stdout, "reconfigure"):
     sys.stderr.reconfigure(encoding="utf-8")
 
 DB_PATH = os.path.expandvars(r"%USERPROFILE%\.local\share\opencode\opencode.db")
+__version__ = "1.0.0"
 
 
 def _ts_to_str(ts: int) -> str:
@@ -217,6 +219,7 @@ def main() -> int:
                         help="--recent: filter by directory name substring (e.g. support-tool)")
     parser.add_argument("--compact", action="store_true",
                         help="--recent: show title only (no last_parts)")
+    parser.add_argument("--version", action="version", version=f"%(prog)s {__version__}")
     args = parser.parse_args()
 
     if not os.path.exists(DB_PATH):
