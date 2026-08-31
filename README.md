@@ -6,7 +6,7 @@ A self-growth observation system **for opencode**. It reviews session logs to fi
 
 ## What it does
 
-At session start (or via `/loop` command), loop engineering:
+Type `/loop` to run loop engineering. The agent will:
 
 1. **Inventories** your existing skills (`.opencode/skills/`)
 2. **Reviews** the current session + last 7 days of sessions
